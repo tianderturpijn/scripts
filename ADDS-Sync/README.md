@@ -1,5 +1,6 @@
 ### Query samples
 
+```powershell
 adds_users_CL
 | where PasswordLastSet_t between (datetime(2021-08-12 12:00:00) .. datetime(now))
 | project PasswordLastSet_t
@@ -16,3 +17,4 @@ SecurityEvent
 adds_users_CL
 | extend userName = DistinguishedName_s
 ) on userName
+```
